@@ -8,7 +8,7 @@
       <body>
       <center><h1>Stout Case Study ~ Loan Data from Lending Club</h1>
             <img src="loan_image.jpg" alt="pie chart" width="50%"></center>
-      <h2>Description of the Dataset</h2>
+      <h3>Description of the Dataset</h3>
             <p>The dataset under investigation contains loan data. In particular, it represents 10 thousands of loans that have been made through the Lending Club 
                   platform. The Lending Club platform is a platform that allows individuals to lend to other individuals.
                   It is important to note that this dataset represents only loans that have been actually made and does not include loan applications that have not been accepted.
@@ -25,13 +25,16 @@
                   valuable information. </p>
             <p>Another issue of the dataset is the fact that the dependent variable "interest_rate" contains some outliers that can be seen in the boxplot below. </p>
       <iframe src="interest_rate.html" width="100%" height="500" style="border:1px solid black;">  </iframe>
-         <h3>Visualizations</h3>
+            Finally, some variables some features seem be similar and contain almost the same information and, as a result, Principal Component Analysis can be tested.
+         
+            <h3>Visualizations</h3>
             First of all, we examine the ownership status of the applicant's residence. The pie chart below shows that almost 1 in 2 loans are given to applicants with mortgage, 
             while only 13.5% of loans are given to individuals with rent.
             <iframe src="homeownership.html" width="100%" height="500" style="border:1px solid black;">  </iframe>
-         <h4>Model Creation & Results</h4>
-            <h5>Future Work</h5>
+            
+         <h3>Model Creation & Results</h3>
+            <h3>Future Work</h3>
             <p>Future work includes a better handling of the variable "empl_title" that contains 4741 different categories. These titles could be clustered using
-             more generic profession categories.</p>
+             more generic profession categories, so that the model can have a generic view of the available professions.</p>
       </body>
 </html>
