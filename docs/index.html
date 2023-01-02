@@ -21,8 +21,8 @@
             <center><img src="missing_values.png" alt="pie chart" width="50%"></center>
             
             <p>Moreover, in categorical variables, there are some variables that contain many values only once, so we cannot get to a reliable conclusion
-                  about the relation between job title and interest rate.
-            For instance, there are 4741 unique job titles out of the 10000 instances. To this end, we will omit this variable, since the model is not able to extract 
+                  about their relation with the interest rate.
+            For instance, in variable "emp_title", there are 4741 unique job titles out of the 10000 instances. To this end, we will omit this variable, since the model is not able to extract 
                   valuable information. On the contrary, some variables have only one unique value (e.g. num_accounts_120d_past_due, num_accounts_120d_past_due), or most of 
             observations have the same value (e.g num_accounts_30d_past_due, current_accounts_delinq, num_accounts_30d_past_due, paid_late_fees).</p>
             <p>Another issue of the dataset is the fact that the dependent variable "interest_rate" contains some outliers that can be seen in the boxplot below. </p>
