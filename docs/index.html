@@ -63,12 +63,22 @@
             <center><iframe title="Delinquencies" src="delinquencies.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>        
             
          <h3>Model Creation & Results</h3>
+            <p>In this section, we describe the steps followed to create a model that predicts the interest rate. First of all, we factorize the categorical variables
+            and drop the unnecessary columns where missing values exist in more than 50% of the observations or the categorical variables where
+                  there are more than 4000 unique values. Next, we fill the missing values of joint variables using values from the equivalent individual ones</p>
+            <p>We split the dataset into training and test set (70/30%) and impute the numerical variables using the mean value of the feature in the training set.
+            The last preprocessing step includes standarizing the data using the StandardScaler.</p>
+            <p>The algorithms that will be tested include "XGBoost", "k-Nearest-Neighbors", "Gradient Boosting", and "AdaBoost". In order to select the most suitable
+            hyperparameters, we further split the training set into training and validation set. Since this is a regression problem, the evaluation metrics 
+            that will be used are "Root Mean Square Error (RMSE)", "R-squared", and "Mean Absolute Error". The first one is used for the hyperparameter selection.</p>
+            <p>The following figures present the "rmse" for different values of hyperparameters of each algorithm.</p>
             <center><iframe title="Xgboost" src="xgboost.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             <center><iframe title="Knn" src="knn.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             <center><iframe title="GradientBoosting" src="gradient_boosting.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             <center><iframe title="Adaboost" src="adaboost.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             
-            
+            <p>Finally, after selecting the best values for the hyperparameters, we train each algorithm using the initial training set and test set. The results
+            are presented in the figure below.</p>
             <center><iframe title="Results" src="results.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             
             <h3>Future Work</h3>
