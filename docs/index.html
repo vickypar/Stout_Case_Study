@@ -80,10 +80,11 @@
             <p>Finally, after selecting the best values for the hyperparameters, we train each algorithm using the initial training set and test set. The results
             are presented in the figure below.</p>
             <center><iframe title="Results" src="results.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
-            
+            <p>It is obvious that k-NN performs poorly, while XGBoost achieves the highest value of r-squared and lowest values of rmse and mae.</p>
             <h3>Future Work</h3>
             <p>Future work includes a better handling of the variable "empl_title" that contains 4741 different categories. These titles could be clustered using
-             more generic profession categories, so that the model can have a generic view of the available professions.
+             more generic profession categories, so that the model can have a generic view of the available professions. Moreover, additional visualizations (or statistical tests)
+                 between each feature and the interest rate could show if there are associated and, if not, these features could be omitted.
             Finally, more alogoritms could be tested along with higher hyperparameter tuning.</p>
       </body>
 </html>
