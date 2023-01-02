@@ -34,7 +34,7 @@
                   while only 13.5% of loans are given to individuals with rent.</p>
             <center><iframe title="Homeownership" src="homeownership.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             
-            <p>In the pie chart below, we present the percentages of the application types: if it is "joint" or individual. It is obvious that most of applications
+            <p>In the pie chart below, we present the percentages of the application types: if it is "joint" or "individual". It is obvious that most of applications
             refer to individuals.</p>
             <center><iframe title="ApplicationType" src="application_type.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             
@@ -57,15 +57,15 @@
             <p>Finally, we present a pie chart of the number of delinquencies that applicants had the last two years.</p>
             <center><iframe title="Num_Delinquencies" src="num_delinquencies.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             <p>As expected, loans are given to people with a small number of delinquencies (less than 14), while almost 85% of loans are given to people with no 
-                  delinquencies during the last to 2 years.</p>
+                  delinquencies during the last 2 years.</p>
             <p>The figure that follows presents the association between the number of delinquencies and the interest rate. For less than 7 delinquencies the mean value of interest 
-                  rate increase with the number of delinquencies. After that, we cannot reach to a conclusion, since the percantage of observations is low.</p>
+                  rate increases with the number of delinquencies. After that, we cannot reach to a conclusion, since the percantage of observations is low.</p>
             <center><iframe title="Delinquencies" src="delinquencies.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>        
             
          <h3>Model Creation & Results</h3>
             <p>In this section, we describe the steps followed to create a model that predicts the interest rate. First of all, we factorize the categorical variables
             and drop the unnecessary columns where missing values exist in more than 50% of the observations or the categorical variables where
-                  there are more than 4000 unique values. Next, we fill the missing values of joint variables using values from the equivalent individual ones</p>
+                  there are more than 4000 unique values. Next, we fill the missing values of variables that regard joint loans using values from the equivalent individual ones.</p>
             <p>We split the dataset into training and test set (70/30%) and impute the numerical variables using the mean value of the feature in the training set.
             The last preprocessing step includes standarizing the data using the StandardScaler.</p>
             <p>The algorithms that will be tested include "XGBoost", "k-Nearest-Neighbors", "Gradient Boosting", and "AdaBoost". In order to select the most suitable
@@ -82,8 +82,8 @@
             <center><iframe title="Results" src="results.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             <p>It is obvious that k-NN performs poorly, while XGBoost achieves the highest value of r-squared and lowest values of rmse and mae.</p>
             <h3>Future Work</h3>
-            <p>Future work includes a better handling of the variable "empl_title" that contains 4741 different categories. These titles could be clustered using
-             more generic profession categories, so that the model can have a generic view of the available professions. Moreover, additional visualizations (or statistical tests)
+            <p>Future work includes better handling of the variable "empl_title" that contains 4741 different categories. These titles could be clustered using
+             more generic profession categories, so that the model can obtain a generic view of the available professions. Moreover, additional visualizations (or statistical tests)
                  between each feature and the interest rate could show if there are associated and, if not, these features could be omitted.
             Finally, more alogoritms could be tested along with higher hyperparameter tuning.</p>
       </body>
