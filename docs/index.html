@@ -44,19 +44,23 @@
             
             <p>Since the dependant variable is the interest rate, it is important to examine how it is associated with some of the independant variables.</p>
             <p>First, we analyze the association between annual income and the provided interest rate. To this end, the following scatterplot shows 
-            the interest rate as a function of the annual income in case the income is "verified", "not verified", or "source verified".</p> 
+            the interest rate as a function of the annual income in case the income is "verified", "not verified", or "source verified". 
+            As expected, large values of interest rates are given to people with low income since they are less reliable. On the contrary, the interest rate 
+                  to applicants with high annual income that is verified or source verified is by far less.</p> 
             <center><iframe title="AnnualIncome" src="interest_rate_VS_annual_income.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
             
-            <p>Next, in oder to analyze how the interest rate varies according to the reasons that people get loans, we present the following boxplots. </p>
+            <p>Next, in oder to analyze how the interest rate varies according to the reasons that people get loans, we present the following boxplots. 
+            We do not observe high variations of the interest rate based on the loan purpose. However, the largest mean value of interest rate belongs to 
+            "vacation" loans, while the lowest one belongs to loans for house purchase.</p>
             <center><iframe title="LoanPurpose" src="loan_purpose.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
                      
+            <p>Finally, we present a pie chart of the number of delinquencies that applicants had the last two years.</p>
             <center><iframe title="Num_Delinquencies" src="num_delinquencies.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
-            As expected, loans are given to people with a small number of delinquencies (less than 14), while almost 85% of loans are given to people with no 
-            delinquencies during the last to 2 years.
-            <center><iframe title="Delinquencies" src="delinquencies.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
-            
-            
-          
+            <p>As expected, loans are given to people with a small number of delinquencies (less than 14), while almost 85% of loans are given to people with no 
+                  delinquencies during the last to 2 years.</p>
+            <p>The figure that follows presents the association between the number of delinquencies and the interest rate. For less than 7 delinquencies the mean value of interest 
+                  rate increase with the number of delinquencies. After that, we cannot reach to a conclusion, since the percantage of observations is low.</p>
+            <center><iframe title="Delinquencies" src="delinquencies.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>        
             
          <h3>Model Creation & Results</h3>
             <center><iframe title="Xgboost" src="xgboost.html" width="50%" height="500" style="border:1px solid black;"></iframe></center>
